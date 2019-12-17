@@ -1,9 +1,9 @@
-package diploma;
+package diploma.WBT;
 
 
 import java.util.Arrays;
 
-public class CircularSuffixArray {
+public class CircularSuffixArray implements IStringToIndexTransformer {
     // circular suffix array of s
     String s;
     private Integer[] index;
@@ -49,10 +49,20 @@ public class CircularSuffixArray {
         return first;
     }
 
-
     // returns index of ith sorted suffix
     public int index(int i) {
         return index[i];
+    }
+
+    // Driver Code
+    public static void main(String[] args)
+    {
+        String txt = "WEEKEND";
+        IStringToIndexTransformer sortedString  = new CircularSuffixArray(txt);
+        System.out.println("Following is suffix array for WEEKEND:");
+        for(int i = 0; i < sortedString.length(); i++){
+            System.out.print(sortedString.index(i)+" ");
+        }
     }
 
 }

@@ -1,5 +1,6 @@
 package diploma;
 
+import diploma.WBT.BurrowsWheelerString;
 import diploma.edu.princeton.cs.algs4.Huffman;
 
 import java.io.File;

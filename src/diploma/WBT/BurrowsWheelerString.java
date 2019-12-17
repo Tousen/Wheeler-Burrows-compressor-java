@@ -1,10 +1,12 @@
-package diploma;
+package diploma.WBT;
 
 public class BurrowsWheelerString {
 
     public static int ASCII_ALLOCATION = 10000;
-    static String encode(String word) {
-        CircularSuffixArray csa = new CircularSuffixArray(word);
+    public static String encode(String word) {
+        //IStringToIndexTransformer csa = new CircularSuffixArray(word);
+        // MORE OPTIMAL ALGORITHM ~ 4 times slower
+         IStringToIndexTransformer csa = new ArraySuffix(word);
         StringBuilder builder = new StringBuilder();
 
         String formatedNumber =  String.format("%1$10s",csa.getFirst());
@@ -15,7 +17,7 @@ public class BurrowsWheelerString {
         return builder.toString();
     }
 
-    static String decode(String word) {
+    public static String decode(String word) {
         int first = Integer.parseInt(word.substring(0,10).replace(" ",""));
         String text = word.substring(10,word.length());
         int len = text.length();

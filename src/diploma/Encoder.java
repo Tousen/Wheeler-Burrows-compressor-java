@@ -1,11 +1,10 @@
 package diploma;
 
+import diploma.WBT.BurrowsWheelerString;
 import diploma.edu.princeton.cs.algs4.Huffman;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.LinkedList;
