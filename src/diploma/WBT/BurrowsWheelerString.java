@@ -4,9 +4,9 @@ public class BurrowsWheelerString {
 
     public static int ASCII_ALLOCATION = 10000;
     public static String encode(String word) {
-        //IStringToIndexTransformer csa = new CircularSuffixArray(word);
+        IStringToIndexTransformer csa = new CircularSuffixArray(word);
         // MORE OPTIMAL ALGORITHM ~ 4 times slower
-         IStringToIndexTransformer csa = new ArraySuffix(word);
+        // IStringToIndexTransformer csa = new ArraySuffix(word);
         StringBuilder builder = new StringBuilder();
 
         String formatedNumber =  String.format("%1$10s",csa.getFirst());
